@@ -2,6 +2,7 @@
   --grey: #343436;
   --grey-primary: #282828;
   --grey-secondary: #1f1f1f;
+  --white-primary: #e5e5e5
 }
 html {
   box-sizing: border-box;
@@ -47,7 +48,7 @@ h6 {
   align-items: center;
   background: var(--grey-primary);
   border-bottom: 5px solid black;
-  color: white;
+  color: var(--white-primary);
   padding: 10px;
 }
 
@@ -70,7 +71,7 @@ h6 {
 .button {
   background: var(--grey);
   border: 0;
-  color: white;
+  color: var(--white-primary);;
   padding: 10px;
   border-radius: 5px;
   font-size: 15px;
@@ -84,28 +85,7 @@ h6 {
   grid-row: 2/-1;
   grid-gap: 10px;
   background: var(--grey-primary);
-  color: white;
-}
-
-.left__menu {
-  display: grid;
-  grid-column: 2/3;
-  padding: 20px;
-}
-
-.list__holder li {
-  display: grid;
-  grid-gap: 10px;
-  padding: 0;
-  list-style: none;
-  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
-}
-
-.list__holder a {  
-  display: block;
-  text-decoration: none;
-  padding: 10px;  
-  color: var(--black);    
+  color: var(--white-primary);;
 }
 
 /* .left__menu a {
@@ -122,7 +102,62 @@ h6 {
 } */
 
 .main__container {
-  grid-column: 3/4;
-  background: var(--grey-secondary);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column: 2;  
   padding: 20px;
+}
+
+/* .left__menu {    
+  padding: 20px;
+} */
+
+.list__holder {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.list__holder li {
+  display: grid;
+  grid-gap: 10px;
+  padding: 0;
+  list-style: none;
+  grid-template-rows: repeat(auto-fit, minmax(32px, 1fr));
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
+/* .list__holder a {  
+  display: block;
+  text-decoration: none;
+  padding: 10px;  
+  color: var(--black);    
+} */
+
+#top__filters li .item_counter {
+  display: inline-block;
+  color: #777;
+  font-size: 11px;
+  margin-left: 5px;
+}
+
+.project__panel {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.expansion_panel__toggle {
+  display: grid;
+  grid-gap: 10px;  
+  grid-template-rows: repeat(auto-fit, minmax(32px, 1fr));
+  grid-template-columns: auto 1fr auto;  
+  align-items: center;
+  background: var(--grey-primary);
+  color: var(--white-primary);
+  border: 0;  
+  padding-left: 45px;
+}
+
+.project__list{
+  background: var(--grey-secondary);
 }

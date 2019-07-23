@@ -1,0 +1,128 @@
+:root {
+  --grey: #343436;
+  --grey-primary: #282828;
+  --grey-secondary: #1f1f1f;
+}
+html {
+  box-sizing: border-box;
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma,
+    Sans-Serif;
+  font-weight: normal;
+  color: #272727;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.todolist {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 2fr 2fr auto;
+}
+
+/* header! */
+
+.todo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: center;
+  background: var(--grey-primary);
+  border-bottom: 5px solid black;
+  color: white;
+  padding: 10px;
+}
+
+.quick__find {
+  border: 1px solid transparent !important;
+  border-radius: 3px;
+  padding: 5px;
+  width: 300px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+  color: #fff;
+  padding-left: 30px;
+  margin-top: 2px;
+  background: 0;
+  -webkit-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+}
+
+.button {
+  background: var(--grey);
+  border: 0;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 15px;
+  position: relative;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-row: 2/-1;
+  grid-gap: 10px;
+  background: var(--grey-primary);
+  color: white;
+}
+
+.left__menu {
+  display: grid;
+  grid-column: 2/3;
+  padding: 20px;
+}
+
+.list__holder li {
+  display: grid;
+  grid-gap: 10px;
+  padding: 0;
+  list-style: none;
+  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.list__holder a {  
+  display: block;
+  text-decoration: none;
+  padding: 10px;  
+  color: var(--black);    
+}
+
+/* .left__menu a {
+  min-height: 24px;
+  font-size: 14px;
+  list-style: none;
+  cursor: pointer;
+  padding: 9px 16px 9px 5px;  
+  transition: color 0.1s ease-in, background-color 0.1s ease-in;
+  line-height: 1.25;  
+  display: flex;
+  border-radius: 3px;  
+  align-items: center;
+} */
+
+.main__container {
+  grid-column: 3/4;
+  background: var(--grey-secondary);
+  padding: 20px;
+}
